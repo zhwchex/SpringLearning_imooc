@@ -7,5 +7,10 @@
    <bean id="userService" class="com.imooc.ioc.demo1.UserServiceImpl">
         <property name="name" value="李四"/>
     </bean>
-
+    <!--test 创建水果类-->
+    <bean id="foodService" class = "com.imooc.ioc.demo1.FoodServiceImpl">
+        <property name="kind" value="水果"/>
+        <property name="name" value="香蕉"/>
+        <property name="taste" value="甜甜的"/>
+    </bean>
 </beans>

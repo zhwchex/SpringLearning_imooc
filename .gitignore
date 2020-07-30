@@ -3,6 +3,15 @@
 .idea/
 *.ipr
 *.iws
+/*/target/
+target
+.project
+.settings/
+/*/.project
+/./.settings/
+/*/.classpath
+/*/.idea
+dependency-reduced-pom.xml
 # Android Studio Navigation editor temp files
 
 .navigation/
