@@ -28,6 +28,7 @@
     <bean id="userDao" class="com.imooc.ioc.demo3.UserDaoImpl"/>
 
     <!--Bean的构造方法的属性注入=============================-->
+<!--note bean的属性构造方法注入-->
 <bean id="user" class="com.imooc.ioc.demo4.User">
         <constructor-arg name="name" value="张三" />
         <constructor-arg name="age" value="23"/>
@@ -37,7 +38,7 @@
 <!--    <bean id="person" class="com.imooc.ioc.demo4.Person">
         <property name="name" value="李四"/>
         <property name="age" value="32"/>
-        <property name="cat" ref="cat"/>
+        <property name="cat" ref="cat"/> note ref表示引用别的bean
     </bean>
 
     <bean id="cat" class="com.imooc.ioc.demo4.Cat">
@@ -45,11 +46,13 @@
     </bean>-->
 
     <!--Bean的p名称空间的属性注入==============================-->
+<!--note 使用p命名空间简化属性注入写法    -->
     <bean id="person" class="com.imooc.ioc.demo4.Person" p:name="大黄" p:age="34" p:cat-ref="cat"/>
 
     <bean id="cat" class="com.imooc.ioc.demo4.Cat" p:name="小黄"/>
 
     <!--Bean的SpEL的属性注入==============================-->
+<!--note spEL表达式   -->
     <bean id="category" class="com.imooc.ioc.demo4.Category">
         <property name="name" value="#{'服装'}"/>
     </bean>

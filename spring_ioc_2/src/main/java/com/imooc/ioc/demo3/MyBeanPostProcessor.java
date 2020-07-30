@@ -14,6 +14,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
         return bean;
     }
 
+    //note BeanPostProcessor中加强类
     @Override
     public Object postProcessAfterInitialization(final Object bean, String beanName) throws BeansException {
         //System.out.println("第八步：初始化后方法...");
