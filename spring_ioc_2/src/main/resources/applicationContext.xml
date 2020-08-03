@@ -75,7 +75,7 @@
                 <value>ccc</value>
             </list>
         </property>
-        <!--List集合的属性注入-->
+        <!--List集合的属性注入 note 复杂属性的注入-->
         <property name="list">
             <list>
                 <value>111</value>
