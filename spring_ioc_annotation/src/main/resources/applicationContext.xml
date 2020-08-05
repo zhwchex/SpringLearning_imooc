@@ -6,8 +6,9 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--开启注解扫描=======================-->
-<!--    <context:component-scan base-package="com.imooc"/>-->
-
+<!--@note 寻找base-package下面带有注解的类    -->
+    <context:component-scan base-package="com.imooc"/>
+<!--寻找类属性上面的注入，@component、@service等失效-->
     <context:annotation-config/>
 
     <bean id="productService" class="com.imooc.demo3.ProductService">

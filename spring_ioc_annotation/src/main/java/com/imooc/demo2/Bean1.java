@@ -8,7 +8,7 @@ import javax.annotation.PreDestroy;
 @Component("bean1")
 public class Bean1 {
 
-    @PostConstruct
+    @PostConstruct //@note spring一启动就会调用
     public void init(){
         System.out.println("initBean...");
     }
@@ -17,7 +17,7 @@ public class Bean1 {
         System.out.println("say...");
     }
 
-    @PreDestroy
+    @PreDestroy//@note applicationContext关闭后调用
     public void destory(){
         System.out.println("destoryBean...");
     }

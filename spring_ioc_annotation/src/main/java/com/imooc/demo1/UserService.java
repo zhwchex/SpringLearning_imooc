@@ -13,13 +13,16 @@ import javax.annotation.Resource;
  *  * 传统方式需要去XML中配置<bean id="" class=""></bean>
  */
 //@Component("userService")
+//@note @Component被扫描  <context:component-scan base-package="com.imooc"/>
+
 @Service("userService")
 public class UserService {
-    @Value("米饭")
+    @Value("米饭")//@note 注解方式set属性值
     private String something;
-/*    @Autowired
-    @Qualifier("userDao")*/
-    @Resource(name="userDao")
+    @Autowired(required = true)
+    @Qualifier("userDao")
+//@note @Reource = @Autowired + @Qualifier
+//    @Resource(name="userDao")
     private UserDao userDao;
 
     public String sayHello(String name){
